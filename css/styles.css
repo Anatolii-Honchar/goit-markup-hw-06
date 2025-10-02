@@ -41,7 +41,7 @@ body {
 /*--------- Header ---------*/
 
 .header-section {
-  padding-top: 24px;
+  /* padding-top: 24px; */
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
@@ -51,6 +51,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* padding: 16px; */
 }
 
 .header-navigation {
@@ -68,6 +69,7 @@ body {
   text-transform: uppercase;
   color: #4d5ae5;
   /* margin-right: 76px; */
+  margin-right: 120px;
 }
 
 .logo-header .logo-color {
@@ -75,7 +77,7 @@ body {
 }
 
 .header-navigation-list {
-  display: flex;
+  display: none;
   gap: 40px;
   align-items: center;
 }
@@ -95,20 +97,25 @@ body {
 
 .contacts {
   font-style: normal;
+  display: none;
 }
 
 .contacts-list {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  /* gap: 40px; */
+  gap: 12px;
   align-items: center;
 }
 
 .contacts-link {
   font-weight: 400;
-  font-size: 16px;
-  /* line-height: 24px; */
+  /* font-size: 16px;
   line-height: 150%;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em; */
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -135,6 +142,123 @@ body {
   left: 0;
   bottom: -1px;
 }
+.menu-open-btn {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.menu-open-icon {
+  fill: #2f2f37;
+}
+
+.mobile-menu-wrapper {
+  padding: 24px 24px 40px 16px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* max-width: 320px; */
+}
+
+.menu-close-btn {
+  padding: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: auto;
+  margin-bottom: 24px;
+}
+
+.menu-close-icon {
+  fill: #2e2f42;
+}
+
+.mobile-navigation {
+}
+
+.mobile-navigation-list {
+}
+
+.mobile-navigation-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-navigation-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.curent-mobile-link {
+  color: #404bbf;
+}
+
+.mobile-contacts-list {
+}
+
+.mobile-contacts-item {
+}
+
+.mobile-contacts-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  font-style: normal;
+}
+
+.mobile-contacts-link:focus {
+  color: #4d5ae5;
+}
+
+.mobile-social-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 48px;
+}
+.mobile-social-item {
+  width: 40px;
+  height: 40px;
+}
+.mobile-social-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-social-icon {
+  fill: #f4f4fd;
+}
+
 /*--------- Main section---------*/
 
 .main-section {
@@ -812,6 +936,23 @@ body {
     width: 768px;
   }
 
+  /* --header section-- */
+  .header-navigation-list {
+    display: flex;
+  }
+
+  .contacts {
+    display: flex;
+  }
+
+  .menu-open-btn {
+    display: none;
+  }
+
+  .mobile-menu-wrapper {
+    display: none;
+  }
+
   /* --main section-- */
   .main-section {
     padding-top: 112px;
@@ -909,6 +1050,16 @@ body {
     width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  /* --header section-- */
+  .logo {
+    margin-right: 76px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    gap: 40px;
   }
 
   /* --main section-- */
