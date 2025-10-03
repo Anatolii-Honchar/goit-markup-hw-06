@@ -42,6 +42,8 @@ body {
 
 .header-section {
   /* padding-top: 24px; */
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
@@ -171,6 +173,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   /* max-width: 320px; */
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .menu-close-btn {
@@ -733,8 +739,10 @@ body {
 
 .modal {
   border-radius: 4px;
-  min-width: 408px;
-  min-height: 584px;
+  /* min-width: 408px;
+  min-height: 584px; */
+  width: 288px;
+  height: 623px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -742,7 +750,7 @@ body {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fcfcfc;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -878,9 +886,10 @@ body {
 }
 
 .modal-check-box {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -899,6 +908,7 @@ body {
   font-size: 12px;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex;
   align-items: center;
 }
 
@@ -937,6 +947,10 @@ body {
   }
 
   /* --header section-- */
+  .header-section {
+    padding-top: unset;
+    padding-bottom: unset;
+  }
   .header-navigation-list {
     display: flex;
   }
@@ -1039,6 +1053,13 @@ body {
   }
   .footer-social-wrapper {
     margin: unset;
+  }
+
+  /* --modal section */
+  .modal {
+    width: 408px;
+    height: 584px;
+    padding: 72px 24px 24px 24px;
   }
 }
 
